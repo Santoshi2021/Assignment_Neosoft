@@ -10,6 +10,7 @@ import com.neosoft.model.Project;
 import com.neosoft.model.Student;
 import com.neosoft.util.UserDetailsServiceImpl;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class StudentValidator.
  * 
@@ -22,11 +23,17 @@ public class StudentValidator implements Validator {
 	/** The logger. */
 	private static Logger logger = LoggerFactory.getLogger(UserDetailsServiceImpl.class);
 
+	/* (non-Javadoc)
+	 * @see org.springframework.validation.Validator#supports(java.lang.Class)
+	 */
 	@Override
 	public boolean supports(Class<?> clazz) {
 		return clazz.isAssignableFrom(Student.class);
 	}
 
+	/* (non-Javadoc)
+	 * @see org.springframework.validation.Validator#validate(java.lang.Object, org.springframework.validation.Errors)
+	 */
 	@Override
 	public void validate(Object target, Errors errors) {
 		Student student = (Student) target;
